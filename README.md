@@ -23,7 +23,9 @@ ExHeartbeat works without any configuration.
 * By default metric is emitted every minute.
 
 ## Configuration
-Thought not necessary, it is recommended to explicitly set-up
+No configuration is required for this service.
+
+Thought not necessary, it is recommended to explicitly configure
 ExStatsD in order to set metric prefix there (key is 'namespace'):
 ```
 config :ex_statsd,
@@ -32,7 +34,9 @@ config :ex_statsd,
        namespace: "your_app_name.application_environment"
 ```
 
-Further, metric bucket name can be set with:
+The rest of the configuration options are needed rarely.
+
+Metric bucket name can be set with:
 ```
 config(:ex_heartbeat, bucket_name: "custom_bucket_name")
 ```
